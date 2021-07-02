@@ -9,7 +9,7 @@
 body {
     height: 100vh;
     width: 100%;
-    background: linear-gradient(to left top, rgb(167, 153, 231), rgb(109, 226, 187));
+    background: linear-gradient(120deg, rgb(169, 253, 143), rgb(187, 130, 204), rgb(95, 87, 145));
 }
 
 .container {
@@ -53,6 +53,7 @@ body {
     list-style-type: none;
     height: 45px;
     line-height: 45px;
+    overflow: hidden;
     position: relative;
     border-radius: 3px;
     background: #F9FAFB;
@@ -63,7 +64,7 @@ body {
 
 .todoList li span {
     position: absolute;
-    right: -35px;
+    right: -55px;
     color: white;
     background: red;
     width: 35px;
