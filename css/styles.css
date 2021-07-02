@@ -69,3 +69,19 @@ body {
     text-align: center;
     cursor: pointer;
 }
+
+.container .footer {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.footer button {
+    border: none;
+    background: rgb(107, 107, 192);
+    color: white;
+    cursor: pointer;
+    margin-left: 2px;
+    padding: 6px 10px;
+}
