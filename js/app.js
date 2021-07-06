@@ -21,8 +21,8 @@ addBtn.onclick = () => {
     }
     Arrlst.push(UserData);
     localStorage.setItem("New Todo", JSON.stringify(Arrlst));
-    console.log(getStorage);
-    console.log(Arrlst);
+    // console.log(getStorage);
+    // console.log(Arrlst);
     showTasks();
 
 }
