@@ -1,6 +1,7 @@
 const inputBox = document.querySelector(".inputfield input");
 const addBtn = document.querySelector(".inputfield button");
 const todoList = document.querySelector(".todoList");
+const taskCount = document.querySelector(".footer button");
 inputBox.onkeyup = () => {
     let UserData = inputBox.value;
     if (UserData.trim() != 0) {
@@ -34,7 +35,7 @@ function showTasks() {
     } else {
         Arrlst = JSON.parse(getStorage);
     }
-    const pendingTasks = document.querySelector(".footer .pendingTasks");
+    const pendingTasks = document.querySelector(".pendingTasks");
     pendingTasks.textContent = Arrlst.length;
     let newLiTag = ''
     Arrlst.forEach((element, Index) => {
@@ -51,4 +52,10 @@ function deleteTask(index) {
     localStorage.setItem("New Todo", JSON.stringify(Arrlst));
     showTasks();
 
+}
+
+taskCount.onclick = () => {
+    Arrlst = []
+    localStorage.setItem("New Todo", JSON.stringify(Arrlst));
+    showTasks();
 }
