@@ -37,7 +37,7 @@ function showTasks() {
     let newLiTag = ''
     Arrlst.forEach((element, Index) => {
         newLiTag += `
-        <li>${element}<span onclick="deleteTask()";><i class="fas fa-trash"></i></span></li>`
+        <li>${element}<span onclick="deleteTask()"><i class="fas fa-trash"></i></span></li>`
     });
     todoList.innerHTML = newLiTag;
 }
@@ -45,7 +45,8 @@ function showTasks() {
 function deleteTask(index) {
     let getStorage = localStorage.getItem("New Todo");
     Arrlst = JSON.parse(getStorage);
-    Arrlst.splice(index, 1)
-
+    Arrlst.splice(index, 1);
+    localStorage.setItem("New Todo", JSON.stringify(Arrlst));
+    showTasks();
 
 }
