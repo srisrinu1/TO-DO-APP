@@ -41,3 +41,11 @@ function showTasks() {
     });
     todoList.innerHTML = newLiTag;
 }
+
+function deleteTask(index) {
+    let getStorage = localStorage.getItem("New Todo");
+    Arrlst = JSON.parse(getStorage);
+    Arrlst.splice(index, 1)
+
+
+}
