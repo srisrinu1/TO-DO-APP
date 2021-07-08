@@ -34,7 +34,8 @@ function showTasks() {
     } else {
         Arrlst = JSON.parse(getStorage);
     }
-    const pendingTasks = document.querySelector
+    const pendingTasks = document.querySelector(".footer .pendingTasks");
+    pendingTasks.textContent = Arrlst.length;
     let newLiTag = ''
     Arrlst.forEach((element, Index) => {
         newLiTag += `
