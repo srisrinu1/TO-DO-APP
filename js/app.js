@@ -34,6 +34,7 @@ function showTasks() {
     } else {
         Arrlst = JSON.parse(getStorage);
     }
+    const pendingTasks = document.querySelector
     let newLiTag = ''
     Arrlst.forEach((element, Index) => {
         newLiTag += `
